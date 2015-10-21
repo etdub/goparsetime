@@ -179,7 +179,6 @@ void usage () {
 }
 
 void panic (int error) {
-    fprintf(stderr, "%s\n", ErrorMessages[error]);
     ret_code = 1;
 }
 
