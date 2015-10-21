@@ -47,4 +47,10 @@ func TestParsetime(t *testing.T) {
 	if expectedDate != parseDate {
 		t.Errorf("Actual: %#v, expected: %#v\n", parseDate, expectedDate)
 	}
+
+	// Invalid date should return an error
+	parseDate, err = Parsetime("invalid string")
+	if err == nil {
+		t.Fatal("Expected error")
+	}
 }
